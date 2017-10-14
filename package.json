@@ -2,9 +2,9 @@
   "name": "termterm.js",
   "version": "0.0.1",
   "description": "Small utility that converts string representations of RDF terms to a JSON representation as specified by RDF.js",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,31 @@
   "bugs": {
     "url": "https://github.com/wschella/TermTerm.js/issues"
   },
-  "homepage": "https://github.com/wschella/TermTerm.js#readme"
+  "homepage": "https://github.com/wschella/TermTerm.js#readme",
+  "devDependencies": {
+    "@types/jest": "^21.1.2",
+    "@types/rdf-data-model": "^1.0.0",
+    "@types/rdf-js": "^1.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.2.2",
+    "jest": "^21.2.1",
+    "ts-jest": "^21.1.2",
+    "typescript": "^2.5.3"
+  },
+  "dependencies": {
+    "rdf-data-model": "^1.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
 }

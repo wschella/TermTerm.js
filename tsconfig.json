@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "module": "CommonJS",
+    "target": "ES6",
+    "declaration": true,
+    "outDir": "./dist"
+      
+    },
+    "include": [
+      "**/*.ts"
+    ]
+}
