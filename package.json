@@ -1,0 +1,25 @@
+{
+  "name": "termterm.js",
+  "version": "0.0.1",
+  "description": "Small utility that converts string representations of RDF terms to a JSON representation as specified by RDF.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wschella/TermTerm.js.git"
+  },
+  "keywords": [
+    "RDF",
+    "SPARQL",
+    "TypeScript",
+    "utility"
+  ],
+  "author": "Wout Schellaert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wschella/TermTerm.js/issues"
+  },
+  "homepage": "https://github.com/wschella/TermTerm.js#readme"
+}
