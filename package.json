@@ -24,7 +24,6 @@
   "homepage": "https://github.com/wschella/TermTerm.js#readme",
   "devDependencies": {
     "@types/jest": "^21.1.2",
-    "@types/rdf-data-model": "^1.0.0",
     "@types/rdf-js": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
@@ -33,7 +32,9 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "rdf-data-model": "^1.0.0"
+    "@types/rdf-data-model": "^1.0.0",
+    "rdf-data-model": "^1.0.0",
+    "rdf-js": "^1.0.1"
   },
   "jest": {
     "transform": {

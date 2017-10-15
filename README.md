@@ -9,3 +9,8 @@
 1. `npm install -g gulp-cli`
 1. `npm install`
 1. `npm test`
+
+## Extra
+
+Code ripped from [N3.js](https://github.com/RubenVerborgh/N3.js)
+Credits for the logic to @RubenVerborgh.
