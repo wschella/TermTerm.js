@@ -1,28 +1,19 @@
 import * as RDF from 'rdf-data-model';
 import { Term, NamedNode } from 'rdf-js'
 
-export namespace TermTerm {
-
-  export function sayHello() {
-    return 'hi';
-  }
+export default function fromString(str: string) :Term {
+  // Falsy value or empty string indicate the default graph
+  if (!str)
+  return RDF.defaultGraph();
   
-  export function fromString(str: string) :Term {
-    // Falsy value or empty string indicate the default graph
-    if (!str)
-    return RDF.defaultGraph();
-    
-    // Identify the term type based on the first character
-    switch (str[0]) {
-      case '_': return RDF.blankNode(str.substr(2));
-      case '?': return RDF.variable(str.substr(1));
-      case '"': return RDF.literal(str.substr(1, str.lastIndexOf('"') - 1), languageOrDatatype(str) || undefined );
-      default:  return RDF.namedNode(str);
-    }
+  // Identify the term type based on the first character
+  switch (str[0]) {
+    case '_': return RDF.blankNode(str.substr(2));
+    case '?': return RDF.variable(str.substr(1));
+    case '"': return RDF.literal(str.substr(1, str.lastIndexOf('"') - 1), languageOrDatatype(str) || undefined );
+    default:  return RDF.namedNode(str);
   }
 }
-  
-  //const df = new DataFactory();
 
 function languageOrDatatype(lit: string) :string | NamedNode {
   return language(lit) || dataType(lit);

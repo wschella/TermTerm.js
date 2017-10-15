@@ -32,7 +32,6 @@
     "typescript": "^2.5.3"
   },
   "dependencies": {
-    "@types/rdf-data-model": "^1.0.0",
     "rdf-data-model": "^1.0.0",
     "rdf-js": "^1.0.1"
   },

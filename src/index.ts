@@ -1,1 +1,2 @@
-export { TermTerm } from './termterm'
+import fromString from './termterm';
+export default fromString;
