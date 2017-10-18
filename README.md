@@ -8,7 +8,10 @@
 1. `npm install -g typescript`
 1. `npm install -g gulp-cli`
 1. `npm install`
+1. `npm build`
 1. `npm test`
+
+You can also use `gulp` or `gulp watch` for building & compiling.
 
 ## TODO
 

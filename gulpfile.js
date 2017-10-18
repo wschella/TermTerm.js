@@ -1,8 +1,8 @@
-var gulp = require("gulp");
-var ts = require("gulp-typescript");
+var gulp = require('gulp');
+var ts = require('gulp-typescript');
 var del = require('del');
-
-var tsProject = ts.createProject("tsconfig.json");
+var merge = require('merge-stream');
+var sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('clean:output', function () {
   return del([
@@ -10,14 +10,23 @@ gulp.task('clean:output', function () {
   ]);
 });
 
-gulp.task("watch", function(){
-    gulp.watch(['**/*.ts'], ["default"], { ignoreInitial: false });
+gulp.task('watch', function(){
+  gulp.watch(['**/*.ts'], ['default'], { ignoreInitial: false });
 });
 
-gulp.task("compile", ['clean:output'], function(){
-    return tsProject.src()
-      .pipe(tsProject())
-      .js.pipe(gulp.dest("dist"));
+gulp.task('compile', ['clean:output'], function(){
+    var tsProject = ts.createProject('tsconfig.json');
+    var result = tsProject.src()
+        .pipe(sourcemaps.init())
+        .pipe(tsProject());
+
+    var js = result.js
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('dist'));
+
+    var dts = result.dts.pipe(gulp.dest('dist'));
+
+    return merge(js, dts);
 });
 
-gulp.task("default", ['compile']);
+gulp.task('default', ['compile']);

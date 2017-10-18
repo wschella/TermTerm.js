@@ -1,10 +1,13 @@
 {
   "name": "termterm.js",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Small utility that converts string representations of RDF terms to a JSON representation as specified by RDF.js",
   "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "npm run build",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,8 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
+    "gulp-sourcemaps": "^2.6.1",
+    "merge-stream": "^1.0.1",
     "jest": "^21.2.1",
     "ts-jest": "^21.1.2",
     "typescript": "^2.5.3"
