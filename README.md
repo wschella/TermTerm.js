@@ -10,7 +10,11 @@
 1. `npm install`
 1. `npm test`
 
+## TODO
+
+1. Testing (probably gonna experiment with some less verbose testing methods, in combination with jest)
+
 ## Extra
 
-Code ripped from [N3.js](https://github.com/RubenVerborgh/N3.js)
+Code ripped and ported from [N3.js](https://github.com/RubenVerborgh/N3.js)
 Credits for the logic to @RubenVerborgh.

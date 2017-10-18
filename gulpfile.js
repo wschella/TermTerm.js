@@ -14,10 +14,10 @@ gulp.task("watch", function(){
     gulp.watch(['**/*.ts'], ["default"], { ignoreInitial: false });
 });
 
-gulp.task("compile", function(){
+gulp.task("compile", ['clean:output'], function(){
     return tsProject.src()
       .pipe(tsProject())
       .js.pipe(gulp.dest("dist"));
 });
 
-gulp.task("default", ['clean:output', 'compile']);
+gulp.task("default", ['compile']);
