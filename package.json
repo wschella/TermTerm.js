@@ -24,7 +24,8 @@
   "homepage": "https://github.com/wschella/TermTerm.js#readme",
   "devDependencies": {
     "@types/jest": "^21.1.2",
-    "@types/rdf-js": "^1.0.0",
+    "@types/node": "^8.0.44",
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
     "jest": "^21.2.1",
