@@ -1,5 +1,7 @@
 # TermTerm.js
 
+## WARNING: Deprecated in favor of https://github.com/rubensworks/rdf-string.js
+
  Small utility that converts string representations of RDF terms to a JSON representation as specified by RDF.js
 
 ## Setup
